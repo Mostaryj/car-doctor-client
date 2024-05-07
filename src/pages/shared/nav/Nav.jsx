@@ -9,7 +9,7 @@ const Nav = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {})
-      .then((error) => console.log(error));
+       .then((error) => console.log(error));
   };
 
   const navItems = (
