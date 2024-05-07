@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import BookingRow from "./BookingRow";
 import Swal from "sweetalert2";
-// import axios from "axios";
+//  import axios from "axios";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const Bookings = () => {
@@ -15,8 +15,7 @@ const Bookings = () => {
   useEffect(() => {
     if (user) {
       console.log(user.email);
-      axiosSecure
-        .get(`/bookings-email/${user?.email}`)
+      axiosSecure.get(`/bookings-email/${user?.email}`)
         // axios.get(url, {withCredentials: true})
         .then((res) => {
           setBookings(res.data);
